@@ -1,11 +1,10 @@
 pitty = int(input("Please input your pitty"))
 pulls = int(input("Please input the number of pulls you wish to do"))
-if pulls >= 10: 
-    print("test_1")
-elif pulls < 10:
-    print("test_2")
-else: #will print the number of 5 stars obtained and what pulls they will get them at
-    print("Your pulls are over you got")
+#TO DO LIST:
+    #1. Make a calculation for 10 pulls
+    #2. Make a calculation for 1 pulls 
+    #3. calculate the amount of 10 pulls and 1 pulls done 
+    #4. 
 
 import math as mt
 import random as rand
@@ -21,3 +20,7 @@ def pull(x,z):
         #this will be hard pitty 
     else :
         print("")  
+
+def pull_10(c):
+    #'c' will be the amount of 10 pulls to be done
+    rand.randint(3,500)
