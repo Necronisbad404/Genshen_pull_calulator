@@ -10,7 +10,9 @@ four_stars_pitty = 0
     #2. Make a calculation for 1 pulls 
     #3. calculate the amount of 10 pulls and 1 pulls (done, needs testing)
     #4. .6% rand int generator or 3/500
-    #5.
+    #5. add more falsafe mesure 
+    #6. Make calculations for 5* curbed pulls
+    #7. note what pulls got 5*'s
 
 import math as mt
 import random as rand
@@ -26,7 +28,23 @@ def pull(x,z):
         #this will be hard pitty 
     else :
         print("")  
-
+#program for 10 pulls to caculate off of 
+def pull_10_program():
+        v = 10
+        while v > 0:
+            z = rand.randint(1,167) # is very slightly off by ~.00002
+            x = rand.randint(1,20)# off by about ~0.4 ## will look into making more precsies
+            if z == 167:
+                five_stars += 1 
+                five_stars_pitty = 0
+            else: 
+                pass
+            if x == 20:
+                four_stars += 1 
+                four_stars_pitty += 1
+            else:
+                pass 
+            v -= 1
 #calculates the number of single pulls and 10 pulls to do 
 def pull_10_1(v): 
     #'v' will be the number of pulls 
@@ -58,5 +76,14 @@ def pull_1(c):
             pass 
         c -= 1
         five_stars_pitty += 1
+
+def pull_10(g):
+    #'g' will be the number of 10 pulls to do 
+    while g > 0: 
+        pull_10_program()
+        four_stars += 1
+        four_stars_pitty = 0 
+        g -= 1
+
 
 
