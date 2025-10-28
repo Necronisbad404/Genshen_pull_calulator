@@ -18,16 +18,32 @@ import math as mt
 import random as rand
 #below is a function to simulate pulls
 def pull(x,z):
+    pull_10_1(z) # will add the 2 varables for 1 and 10 pulls 
     # x will be pitty 
     # z will be pulls to do 
-    if x >= 70: 
-        #this will be the function for soft pitty 
-    elif x <= 70: 
-        #this will be the function for non soft pitty 
-    elif x == 90: 
+    if x == 90:
+        print("placeholder")
+        five_stars += 1
+        five_stars_pitty = 0
         #this will be hard pitty 
-    else :
-        print("")  
+    while x >= 70: 
+        print("placeholder")
+        #this will be the function for soft pitty 
+    while x <= 70: 
+        while pulls_10 >=0:
+            pull_10(1)
+            pulls_10 -= 1
+            x += 10
+        if pulls_10 == 0:
+            while pulls_1 >= 0: 
+                pull_1(1) 
+                pulls_1 -= 1
+                x +=1
+        print("placeholder")
+        #this will be the function for non soft pitty 
+    
+    else : # add more falisafes mesure 
+        print("invalid input please try again or contact me at necronisbad404@gmail.com")
 #program for 10 pulls to caculate off of 
 def pull_10_program():
         v = 10
@@ -84,6 +100,7 @@ def pull_10(g):
         four_stars += 1
         four_stars_pitty = 0 
         g -= 1
+
 
 
 
