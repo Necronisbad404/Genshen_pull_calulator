@@ -1,5 +1,10 @@
+#all variables defined 
 pitty = int(input("Please input your pitty"))
 pulls = int(input("Please input the number of pulls you wish to do"))
+five_stars = 0
+five_stars_pitty = 0
+four_stars = 0
+four_stars_pitty = 0
 #TO DO LIST:
     #1. Make a calculation for 10 pulls
     #2. Make a calculation for 1 pulls 
@@ -31,7 +36,27 @@ def pull_10_1(v):
     global pulls_1 
     pulls_1 = int(v%10) #gives the number of single pulls to do 
 
-def pull_10(c):
-    #'c' will be the amount of 10 pulls to be done
-    rand.randint(3,500) #will not work as intended, will fix 
+def pull_1(c):
+    #'c' will be the amount of 1 pulls to be done
+    # needs to be a 3/500 odds how to get 3/500 = 1/167
+    c = pull_1
+    while c > 0:
+        z = rand.randint(1,167) # is very slightly off by ~.00002
+        x = rand.randint(1,20)# off by about ~0.4 ## will look into making more precsies
+        if z == 167:
+            five_stars += 1 
+            five_stars_pitty = 0
+        else: 
+            pass
+        if four_stars_pitty == 0: 
+            four_stars += 1
+            four_stars_pitty = 0
+        elif x == 20:
+            four_stars += 1 
+            four_stars_pitty += 1
+        else:
+            pass 
+        c -= 1
+        five_stars_pitty += 1
+
 
